@@ -6,13 +6,13 @@ It allows you to create, delete, list clusters and deploy Kubernetes manifests v
 ---
 
 ## 📁 Directory Structure
-
+```
 caas-eks/
 ├── main.go # Main API server and EKS logic
 ├── go.mod # Go module dependencies
 ├── deployment.yaml # Kubernetes manifest to deploy to EKS
 ---
-
+```
 ## Features
 
 - Create EKS Clusters  
