@@ -35,7 +35,7 @@ caas-eks/
 ## Setup
 
 ```bash
-git clone https://github.com/yourusername/AWSSDKPluginGo.git
+git clone https://github.com/mpwusr/AWSSDKPluginGo.git
 cd caas-eks
 go mod tidy
 go run main.go
