@@ -1,24 +1,30 @@
-# AWSSDKPluginGo
 
-Directory structure
+---
 
-caas-eks/
-├── main.go
-├── go.mod
-├── deployment.yaml       <-- your k8s manifest
+## 🚀 Features
 
-# Create a cluster
-curl -X POST http://localhost:8080/clusters -H "Content-Type: application/json" -d '{
-  "name": "caas-demo",
-  "role_arn": "arn:aws:iam::123456789012:role/EKSClusterRole",
-  "subnet_ids": ["subnet-abc", "subnet-def"],
-  "security_groups": ["sg-01234"],
-  "version": "1.27"
-}'
+- ✅ Create EKS Clusters  
+- ❌ Delete EKS Clusters  
+- 🔁 List existing clusters  
+- 🔍 Describe specific cluster  
+- 🚀 Deploy Kubernetes apps using `kubectl apply`
 
-# List clusters
-curl http://localhost:8080/clusters
+---
 
-# Deploy app
-curl -X POST http://localhost:8080/clusters/caas-demo/deploy
+## 🔧 Prerequisites
+
+- [Go 1.19+](https://golang.org/doc/install)
+- AWS CLI configured (`aws configure`)
+- `kubectl` installed and in your system `PATH`
+- IAM permissions for EKS + EC2 + IAM + VPC
+
+---
+
+## 🛠️ Setup
+
+```bash
+git clone https://github.com/yourusername/AWSSDKPluginGo.git
+cd caas-eks
+go mod tidy
+go run main.go
 
