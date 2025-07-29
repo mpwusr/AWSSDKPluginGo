@@ -5,7 +5,7 @@ It allows you to create, delete, list clusters and deploy Kubernetes manifests v
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 ```
 caas-eks/
 ├── main.go # Main API server and EKS logic
@@ -23,7 +23,7 @@ caas-eks/
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 - [Go 1.19+](https://golang.org/doc/install)
 - AWS CLI configured (`aws configure`)
@@ -32,7 +32,7 @@ caas-eks/
 
 ---
 
-## 🛠️ Setup
+## Setup
 
 ```bash
 git clone https://github.com/yourusername/AWSSDKPluginGo.git
