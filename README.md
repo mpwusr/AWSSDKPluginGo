@@ -7,10 +7,23 @@ It allows you to create, delete, list clusters and deploy Kubernetes manifests v
 
 ## Directory Structure
 ```
-caas-eks/
-├── main.go # Main API server and EKS logic
-├── go.mod # Go module dependencies
-├── deployment.yaml # Kubernetes manifest to deploy to EKS
+caas-eks-api-go/
+├── cmd/
+│   └── main.go
+├── api/
+│   └── router.go
+├── handlers/
+│   └── cluster.go
+├── service/
+│   └── eks.go
+├── models/
+│   └── cluster.go
+├── docs/                  # Swagger files (auto-generated)
+├── deployment.yaml
+├── go.mod / go.sum
+├── Makefile
+└── README.md
+
 ---
 ```
 ## Features
@@ -35,8 +48,10 @@ caas-eks/
 ## Setup
 
 ```bash
+cd ~
+cd working
 git clone https://github.com/mpwusr/AWSSDKPluginGo.git
-cd caas-eks
+cd AWSSDKPluginGo
 go mod tidy
 go run main.go
 ```
