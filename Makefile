@@ -1,4 +1,4 @@
-APP_NAME=caas-eks
+APP_NAME=caas-eks-api
 GO_FILES=$(shell find . -type f -name '*.go')
 GO_FMT=$(shell gofmt -l $(GO_FILES))
 
@@ -7,9 +7,16 @@ GO_FMT=$(shell gofmt -l $(GO_FILES))
 all: build
 
 build:
-	go build -o $(APP_NAME) main.go
+	go build -o $(APP_NAME) ./cmd
 
 run:
+	go run ./cmd/main.go
+
+swagger:
+	swag init --parseDependency --parseInternal
+
+clean:
+	rm -f $(APP_NAME)
 	go run main.go
 
 fmt:
@@ -24,9 +31,3 @@ fmt:
 
 vet:
 	go vet ./...
-
-clean:
-	rm -f $(APP_NAME)
-
-swagger:
-	swag init --parseDependency --parseInternal
