@@ -13,13 +13,13 @@ caas-eks/
 ├── deployment.yaml # Kubernetes manifest to deploy to EKS
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ Create EKS Clusters  
-- ❌ Delete EKS Clusters  
-- 🔁 List existing clusters  
-- 🔍 Describe specific cluster  
-- 🚀 Deploy Kubernetes apps using `kubectl apply`
+- Create EKS Clusters  
+- Delete EKS Clusters  
+- List existing clusters  
+- Describe specific cluster  
+- Deploy Kubernetes apps using `kubectl apply`
 
 ---
 
