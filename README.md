@@ -39,4 +39,33 @@ git clone https://github.com/yourusername/AWSSDKPluginGo.git
 cd caas-eks
 go mod tidy
 go run main.go
+```
+API Usage
+Create a Cluster
+```
+curl -X POST http://localhost:8080/clusters \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "caas-demo",
+    "role_arn": "arn:aws:iam::123456789012:role/EKSClusterRole",
+    "subnet_ids": ["subnet-abc", "subnet-def"],
+    "security_groups": ["sg-01234"],
+    "version": "1.27"
+  }'
+```
+List All Clusters
+```
+curl http://localhost:8080/clusters
+```
+Deploy an App to a Cluster
+Ensure deployment.yaml is valid and present.
+```
+curl -X POST http://localhost:8080/clusters/caas-demo/deploy
+```
+License
+MIT License. See LICENSE for more info.
+
+
+
+
 
