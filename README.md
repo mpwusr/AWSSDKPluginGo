@@ -1,4 +1,16 @@
+# AWSSDKPluginGo
 
+A simple Golang-based Container-as-a-Service (CaaS) REST API that manages AWS EKS clusters using the AWS SDK for Go (v2).  
+It allows you to create, delete, list clusters and deploy Kubernetes manifests via `kubectl`.
+
+---
+
+## 📁 Directory Structure
+
+caas-eks/
+├── main.go # Main API server and EKS logic
+├── go.mod # Go module dependencies
+├── deployment.yaml # Kubernetes manifest to deploy to EKS
 ---
 
 ## 🚀 Features
